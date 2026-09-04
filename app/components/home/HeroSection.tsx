@@ -5,7 +5,9 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 
-const IsometricArt = dynamic(() => import("@/app/components/ui/IsometricArt"), { ssr: false });
+const IsometricArt = dynamic(() => import("@/app/components/ui/IsometricArt"), {
+  ssr: false,
+});
 
 const TITLES = [
   "Frontend Engineer",
@@ -61,13 +63,11 @@ export default function HeroSection() {
     return () => clearTimeout(timeout);
   }, [charIndex, isDeleting, titleIndex]);
 
-
   return (
     <section
       id="hero"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-
       <div
         className="absolute inset-0 z-0"
         style={{
@@ -116,14 +116,18 @@ export default function HeroSection() {
             className="text-text-secondary text-base md:text-lg mb-10 leading-relaxed"
             variants={itemVariants}
           >
-            Building scalable web applications with analytical thinking and a passion for impactful digital experiences.
+            Building scalable web applications with analytical thinking and a
+            passion for impactful digital experiences.
           </motion.p>
 
           <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center w-full"
             variants={itemVariants}
           >
-            <Link href="/about" className="group relative block w-full sm:w-auto">
+            <Link
+              href="#about-teaser"
+              className="group relative block w-full sm:w-auto"
+            >
               <motion.div
                 className="px-8 py-3.5 rounded-xl font-medium text-center text-background bg-accent hover:bg-accent/90 transition-all duration-300 animate-glow-pulse cursor-pointer flex items-center justify-center gap-2"
                 whileHover={{ scale: 1.05 }}
@@ -146,14 +150,17 @@ export default function HeroSection() {
               </motion.div>
             </Link>
             <a
-              href="https://drive.google.com/file/d/19nhPRi5pRelZ9NOhEpRWBrmsLXXiE2Al/view?usp=sharing"
+              href="https://drive.google.com/file/d/1IXHYn_Hm9smIGTsEmO8TP69m7L3dfwIF/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
               className="block w-full sm:w-auto"
             >
               <motion.div
                 className="px-8 py-3.5 rounded-xl font-medium border border-border text-text-primary hover:border-border-hover transition-all duration-300 cursor-pointer text-center"
-                whileHover={{ scale: 1.05, backgroundColor: "rgba(255, 255, 255, 0.05)" }}
+                whileHover={{
+                  scale: 1.05,
+                  backgroundColor: "rgba(255, 255, 255, 0.05)",
+                }}
                 whileTap={{ scale: 0.98 }}
               >
                 View Resume
@@ -164,27 +171,6 @@ export default function HeroSection() {
 
         <IsometricArt />
       </div>
-
-      <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2, duration: 0.8 }}
-      >
-        <div className="w-6 h-10 rounded-full border-2 border-accent/30 flex justify-center pt-2">
-          <motion.div
-            className="w-1.5 h-2.5 bg-accent/60 rounded-full"
-            animate={{
-              y: [0, 12, 0],
-            }}
-            transition={{
-              duration: 1.5,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          />
-        </div>
-      </motion.div>
     </section>
   );
 }

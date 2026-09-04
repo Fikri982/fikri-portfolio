@@ -137,6 +137,16 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@keyframes orbit-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes orbit-counter-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
 /* ===== UTILITY CLASSES ===== */
 .animate-fade-in-up {
   animation: fade-in-up 0.6s ease-out forwards;
@@ -169,6 +179,19 @@ h1, h2, h3, h4, h5, h6 {
 
 .animate-slide-in-right {
   animation: slide-in-right 0.6s ease-out forwards;
+}
+
+.animate-orbit-spin {
+  animation: orbit-spin 40s linear infinite;
+}
+
+.animate-orbit-counter-spin {
+  animation: orbit-counter-spin 40s linear infinite;
+}
+
+.group:hover.animate-orbit-spin,
+.group:hover .animate-orbit-counter-spin {
+  animation-play-state: paused;
 }
 
 /* ===== CLEAN SOLID TEXT & BORDERS (NO NEON SLOP) ===== */

@@ -16,7 +16,6 @@ interface ComingSoonProps {
 export default function ComingSoon({
   title,
   subtitle,
-  badgeText = "Coming Soon",
   mathTheme = false,
 }: ComingSoonProps) {
   const [isLoading, setIsLoading] = useState(true);
@@ -44,14 +43,6 @@ export default function ComingSoon({
         />
 
         <div className="max-w-xl w-full text-center relative z-10 space-y-8 py-20">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-dim border border-accent/25">
-            <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-            <span className="text-[10px] font-mono font-semibold tracking-widest text-accent uppercase">
-              {badgeText}
-            </span>
-          </div>
-
           {/* Heading & Subtitle */}
           <div className="space-y-4">
             <h1 className="text-4xl sm:text-5xl font-heading font-bold text-text-primary">

@@ -60,7 +60,7 @@ Ikuti langkah-langkah di bawah ini untuk menjalankan proyek ini di mesin lokal A
 ### 1. Klon Repositori
 
 ```bash
-git clone https://github.com/username/fikri-portfolio.git
+git clone https://github.com/Fikri982/fikri-portfolio.git
 cd fikri-portfolio
 ```
 
