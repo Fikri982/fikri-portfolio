@@ -10,10 +10,14 @@ Sebagai mahasiswa **Matematika Institut Teknologi Sepuluh Nopember (ITS)** denga
 
 - **⚡ Next.js App Router (React 19) & SSG**: Seluruh halaman dinamis arsip proyek (`/projects/[id]`) dikompilasi secara statis pada saat build time menggunakan `generateStaticParams()`. Menghasilkan waktu muat instan (0ms server latency) saat bernavigasi.
 - **🌀 Holographic Math-Code Blueprint**: Visual utama interaktif di Hero Section berupa piringan koordinat 3D yang meliuk mengikuti pergerakan kursor (_3D Tilt tracking_), dikelilingi oleh node teknologi (Next.js, TS, React, Git) dan simbol matematika ($\sum$, $\int$, $f(x)$) serta visualisasi gelombang sinus dinamis.
-- **🧮 Math Playground**: Halaman `/playground` berisi demo visual interaktif Discrete Fourier Transform dan operasi matriks, menggabungkan latar belakang Matematika dengan kemampuan web development.
-- **🐢 Lazy-Loading Komponen Klien**: Komponen grafis berat seperti partikel background (`ParticleCanvas`) dan hologram (`IsometricArt`) dimuat secara _lazy-load_ di sisi klien menggunakan `next/dynamic` dengan opsi `{ ssr: false }` guna mengoptimalkan skor _First Contentful Paint_ (FCP) Lighthouse.
+- **🪐 Tech Orbit Ring**: Elemen 3D interaktif di homepage berupa cincin orbit berisi ikon tech stack yang berputar otomatis dan mengikuti tilt kursor, dengan efek pause-on-hover — dimuat secara _client-only_ (`ssr: false`) untuk menghindari hydration mismatch dari perhitungan trigonometri.
+- **📊 Real-World Impact Stats**: Section statistik di homepage menampilkan angka nyata dari proyek yang sudah di-deploy (jumlah peserta terdaftar per proyek).
+- **📚 Teaching Materials**: Halaman `/teaching` menampilkan materi asisten praktikum (Algoritma & Pemrograman I & II) yang di-embed langsung dari Google Drive lewat iframe modal, tanpa perlu nge-hosting file PDF di repo.
+- **🧮 Math Playground**: Halaman `/playground` sedang dalam pengembangan (interactive sandbox Discrete Fourier Transform & operasi matriks), sementara menampilkan status "Coming Soon".
+- **🧭 Floating Capsule Navbar**: Navigasi mengambang dengan glow effect, active-link underline animasi gelombang sinus, dan gaya path ala terminal (`~`, `/about`, `/projects`).
+- **🐢 Lazy-Loading Komponen Klien**: Komponen grafis berat seperti partikel background (`ParticleCanvas`), hologram (`IsometricArt`), dan Tech Orbit Ring dimuat secara _lazy-load_ di sisi klien menggunakan `next/dynamic` dengan opsi `{ ssr: false }` guna mengoptimalkan skor _First Contentful Paint_ (FCP) Lighthouse.
 - **📅 Integrasi Kalender GitHub**: Menampilkan kontribusi GitHub secara langsung di halaman About menggunakan `react-github-calendar`, didukung API route (`/api/github`) dengan data fallback jika GitHub API gagal/limit.
-- **📂 Clean & Modular Architecture**: Struktur folder komponen dikelompokkan rapi berdasarkan domain halaman (`home`, `about`, `projects`, `layout`, `ui`, `playground`), dengan konten (`data/`) dan tipe data (`types/`) dipisah dari komponen untuk kemudahan pemeliharaan kode.
+- **📂 Clean & Modular Architecture**: Struktur folder komponen dikelompokkan rapi berdasarkan domain halaman (`home`, `about`, `projects`, `layout`, `ui`, `playground`, `teaching`), dengan konten (`data/`) dan tipe data (`types/`) dipisah dari komponen untuk kemudahan pemeliharaan kode.
 
 ---
 
@@ -34,21 +38,23 @@ app/
   about/                  # Halaman riwayat profil & pendidikan
   api/                    # Endpoint API serverless (GitHub integration)
   components/             # Komponen React modular dikelompokkan per halaman
-    home/                 # Komponen khusus landing page (Hero, Project list, dll)
+    home/                 # Komponen khusus landing page (Hero, About Teaser, Tech Orbit Ring, Stats, Projects, dll)
     about/                # Komponen khusus halaman About (Education, Experience, GitHub)
     projects/             # Komponen khusus detail studi kasus proyek
+    teaching/             # Komponen halaman Teaching Materials (Google Drive viewer)
     layout/               # Tata letak global (Navbar & Footer)
     ui/                   # Atom UI terkontrol (PageLoader, Canvas)
     playground/           # Komponen demo math playground (Fourier, Matrix)
-  data/                   # Database lokal statis (proyek, studi kasus, riwayat)
+  data/                   # Database lokal statis (proyek, studi kasus, riwayat, materi mengajar, statistik)
   types/                  # Definisi interface/tipe TypeScript untuk data di atas
-  hooks/                  # Custom React hooks (mis. scroll reveal)
+  hooks/                  # Custom React hooks (mis. usePageLoader, useScrollReveal)
   projects/               # Folder rute pendaftaran halaman dynamic projects
+  teaching/               # Rute halaman Teaching Materials
   playground/             # Rute halaman math playground
   globals.css             # Konfigurasi CSS variables & custom utilities
   layout.tsx              # Tata letak HTML dasar
   page.tsx                # Halaman utama (Landing Page)
-public/                   # File gambar, ikon, dan dokumen PDF (CV)
+public/                   # File gambar, ikon, dan aset proyek
 ```
 
 ---
