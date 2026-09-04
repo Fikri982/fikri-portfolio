@@ -1,6 +1,5 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Project } from "@/app/types/project";
@@ -8,6 +7,7 @@ import { CaseStudy } from "@/app/types/caseStudy";
 import Navbar from "@/app/components/layout/Navbar";
 import Footer from "@/app/components/layout/Footer";
 import PageLoader from "@/app/components/ui/PageLoader";
+import { usePageLoader } from "@/app/hooks/usePageLoader";
 
 interface ProjectDetailsClientProps {
   project: Project;
@@ -15,14 +15,7 @@ interface ProjectDetailsClientProps {
 }
 
 export default function ProjectDetailsClient({ project, study }: ProjectDetailsClientProps) {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 600);
-    return () => clearTimeout(timer);
-  }, []);
+  const isLoading = usePageLoader(600);
 
   // Retrieve case study text or fallbacks
   const studyData = study || {

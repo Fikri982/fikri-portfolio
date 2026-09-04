@@ -1,22 +1,16 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Navbar from "@/app/components/layout/Navbar";
 import Footer from "@/app/components/layout/Footer";
 import PageLoader from "@/app/components/ui/PageLoader";
+import { usePageLoader } from "@/app/hooks/usePageLoader";
 import FourierTab from "./FourierTab";
 import MatrixTab from "./MatrixTab";
 
 export default function PlaygroundClient() {
-  const [isLoading, setIsLoading] = useState(true);
+  const isLoading = usePageLoader();
   const [activeTab, setActiveTab] = useState<"fourier" | "matrix">("fourier");
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 800);
-    return () => clearTimeout(timer);
-  }, []);
 
   return (
     <>

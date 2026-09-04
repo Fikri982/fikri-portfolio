@@ -1,10 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import Link from "next/link";
 import Navbar from "@/app/components/layout/Navbar";
 import Footer from "@/app/components/layout/Footer";
 import PageLoader from "@/app/components/ui/PageLoader";
+import { usePageLoader } from "@/app/hooks/usePageLoader";
 
 interface ComingSoonProps {
   title: string;
@@ -18,14 +18,7 @@ export default function ComingSoon({
   subtitle,
   mathTheme = false,
 }: ComingSoonProps) {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 600);
-    return () => clearTimeout(timer);
-  }, []);
+  const isLoading = usePageLoader(600);
 
   return (
     <>

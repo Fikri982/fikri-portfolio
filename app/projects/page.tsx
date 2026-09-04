@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
@@ -8,6 +8,7 @@ import { projects } from "@/app/data/projects";
 import Navbar from "@/app/components/layout/Navbar";
 import Footer from "@/app/components/layout/Footer";
 import PageLoader from "@/app/components/ui/PageLoader";
+import { usePageLoader } from "@/app/hooks/usePageLoader";
 
 const gridVariants = {
   hidden: { opacity: 0 },
@@ -34,14 +35,7 @@ const cardVariants = {
 
 export default function ProjectsArchive() {
   const [searchQuery, setSearchQuery] = useState("");
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 800);
-    return () => clearTimeout(timer);
-  }, []);
+  const isLoading = usePageLoader();
 
   const filteredProjects = useMemo(() => {
     return projects.filter((p) => {

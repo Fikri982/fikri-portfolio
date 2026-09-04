@@ -1,6 +1,5 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import Navbar from "@/app/components/layout/Navbar";
 import Footer from "@/app/components/layout/Footer";
 import AboutSection from "@/app/components/about/AboutSection";
@@ -9,16 +8,10 @@ import ExperienceSection from "@/app/components/about/ExperienceSection";
 import EducationSection from "@/app/components/about/EducationSection";
 import GithubStats from "@/app/components/about/GithubStats";
 import PageLoader from "@/app/components/ui/PageLoader";
+import { usePageLoader } from "@/app/hooks/usePageLoader";
 
 export default function AboutStoryPage() {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 800);
-    return () => clearTimeout(timer);
-  }, []);
+  const isLoading = usePageLoader();
 
   return (
     <>

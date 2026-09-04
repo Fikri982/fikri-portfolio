@@ -1,17 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { usePageLoader } from "@/app/hooks/usePageLoader";
 import PageLoader from "@/app/components/ui/PageLoader";
 
 export default function HomeLoader() {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 800);
-    return () => clearTimeout(timer);
-  }, []);
+  const isLoading = usePageLoader();
 
   return <PageLoader isLoading={isLoading} />;
 }
