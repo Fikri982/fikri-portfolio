@@ -88,22 +88,22 @@ export default function ContactSection() {
               
               <a
                 href="mailto:mfikrihidayat9674@gmail.com"
-                className="sm:col-span-7 glass-card rounded-2xl p-6 border-glow border-glow-hover flex items-center justify-between hover:bg-surface-hover transition-all duration-300 group cursor-pointer"
+                className="sm:col-span-7 glass-card rounded-2xl p-6 border-glow border-glow-hover flex items-center justify-between gap-4 hover:bg-surface-hover transition-all duration-300 group cursor-pointer"
               >
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-accent-dim text-accent flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                <div className="flex items-center gap-4 min-w-0">
+                  <div className="w-12 h-12 rounded-xl bg-accent-dim text-accent flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-300">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <p className="text-[10px] font-mono text-text-muted uppercase tracking-wider">Direct Mail</p>
-                    <p className="text-xs md:text-sm font-semibold text-text-primary mt-0.5 select-all">
+                    <p className="text-xs md:text-sm font-semibold text-text-primary mt-0.5 select-all break-all">
                       mfikrihidayat9674@gmail.com
                     </p>
                   </div>
                 </div>
-                <span className="text-text-muted group-hover:text-accent transition-colors duration-300 text-lg">
+                <span className="text-text-muted group-hover:text-accent transition-colors duration-300 text-lg shrink-0">
                   →
                 </span>
               </a>
