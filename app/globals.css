@@ -18,7 +18,6 @@
   --font-heading: var(--font-space-grotesk);
 }
 
-/* ===== BASE STYLES ===== */
 * {
   box-sizing: border-box;
 }
@@ -31,18 +30,25 @@ html {
 body {
   background-color: var(--color-background);
   color: var(--color-text-primary);
-  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  font-family:
+    var(--font-sans),
+    system-ui,
+    -apple-system,
+    sans-serif;
   overflow-x: hidden;
 }
 
-/* ===== TYPOGRAPHY ===== */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading), var(--font-sans), system-ui, sans-serif;
   font-weight: 700;
   letter-spacing: -0.02em;
 }
 
-/* ===== SCROLLBAR ===== */
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -60,13 +66,11 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(59, 130, 246, 0.4);
 }
 
-/* ===== SELECTION ===== */
 ::selection {
   background: rgba(59, 130, 246, 0.3);
   color: #fff;
 }
 
-/* ===== ANIMATIONS ===== */
 @keyframes fade-in-up {
   from {
     opacity: 0;
@@ -79,12 +83,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes glow-pulse {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: 0 0 15px rgba(59, 130, 246, 0.1);
   }
   50% {
@@ -93,7 +102,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px);
   }
   50% {
@@ -111,8 +121,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 
 @keyframes slide-in-right {
@@ -138,16 +153,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes orbit-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes orbit-counter-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(-360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
 }
 
-/* ===== UTILITY CLASSES ===== */
 .animate-fade-in-up {
   animation: fade-in-up 0.6s ease-out forwards;
 }
@@ -194,7 +216,6 @@ h1, h2, h3, h4, h5, h6 {
   animation-play-state: paused;
 }
 
-/* ===== CLEAN SOLID TEXT & BORDERS (NO NEON SLOP) ===== */
 .text-glow {
   text-shadow: none;
 }
@@ -203,7 +224,6 @@ h1, h2, h3, h4, h5, h6 {
   text-shadow: none;
 }
 
-/* ===== CLEAN PRECISION BORDER ===== */
 .border-glow {
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
@@ -218,7 +238,6 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 4px 20px rgba(59, 130, 246, 0.08);
 }
 
-/* ===== GLASSMORPHISM ===== */
 .glass {
   background: rgba(9, 9, 11, 0.85);
   backdrop-filter: blur(16px);
@@ -233,7 +252,6 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* ===== REFINED ACCENT TEXT (NO SLOP GRADIENTS) ===== */
 .gradient-text {
   color: #60a5fa;
   background: linear-gradient(135deg, #93c5fd 0%, #3b82f6 100%);
@@ -242,7 +260,6 @@ h1, h2, h3, h4, h5, h6 {
   background-clip: text;
 }
 
-/* ===== SECTION STYLES ===== */
 .section-padding {
   padding: 6rem 1.5rem;
 }
@@ -253,11 +270,12 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* ===== SCROLL REVEAL (initial hidden state) ===== */
 .reveal-hidden {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
 }
 
 .reveal-visible {
@@ -265,7 +283,6 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(0);
 }
 
-/* ===== PARTICLE CANVAS ===== */
 .particle-canvas {
   position: absolute;
   top: 0;
