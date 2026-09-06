@@ -7,7 +7,7 @@ export const experiences: Experience[] = [
     company: "OMITS 19TH",
     period: "Feb 2026 — Present",
     description:
-      "• Leading a cross-functional team of 10 members (3 UI/UX, 3 Frontend, and 4 Backend) to develop the official OMITS 19th competition platform using Agile Scrum.\n• Planned the technical architecture and coordinated UI/UX, Frontend, and Backend development to deliver a scalable and cohesive web platform.\n• Contributed to frontend development while leading sprint planning, code reviews, technical discussions, and cross-team collaboration to ensure high-quality and timely feature delivery.",
+      "• Leading the Web Dev Team to develop the official OMITS 19th competition platform using Agile Scrum.\n• Planned the technical architecture and coordinated UI/UX, Frontend, and Backend development to deliver a scalable and cohesive web platform.\n• Contributed to frontend development while leading sprint planning, code reviews, technical discussions, and cross-team collaboration to ensure high-quality and timely feature delivery.",
     tags: ["Next.js", "TypeScript", "Tailwind CSS", "Go", "PostgreSQL"],
     type: "organization",
   },

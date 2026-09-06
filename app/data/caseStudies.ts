@@ -5,7 +5,7 @@ export const caseStudies: Record<string, CaseStudy> = {
     overview:
       "OMITS 19th (Olimpiade Matematika ITS) is a prestigious national mathematics competition. Under my leadership as the Web Development Lead, our team was tasked with building a robust, high-performance web registration portal and contestant dashboard to manage registration workflows and payments for 1,900+ school-level (SD, SMP, SMA) and university-level (Mahasiswa) students across Indonesia.",
     challenge:
-      "The biggest challenge wasn't purely technical. It was about people, since this was my debut as a Web Dev Lead. I had to learn how to coordinate a cross-functional team of 10 across UI/UX, frontend, and backend, delegate tasks effectively, and keep sprints on track, all while still contributing hands-on to the codebase myself.",
+      "The biggest challenge wasn't purely technical. It was about people, since this was my debut as a Web Dev Lead. I had to learn how to coordinate the Web Dev Team across UI/UX, frontend, and backend, delegate tasks effectively, and keep sprints on track, all while still contributing hands-on to the codebase myself.",
     features: [
       "Informational Pages: Dedicated landing page, about page, and competition-specific landing pages introducing OMITS 19th and its programs.",
       "Multi-Tier Registration: Streamlined registration flow for school-level students (SD, SMP, SMA) and university-level (Mahasiswa) contestants, each with tailored requirements.",
@@ -13,7 +13,7 @@ export const caseStudies: Record<string, CaseStudy> = {
       "Insight & Analytics Dashboard: Detailed reporting on registrant counts and regional demographics for the organizing committee.",
     ],
     roleContribution:
-      "As the Web Dev Lead, I led a cross-functional team of 10, made up of three UI/UX designers, three frontend developers, and four backend engineers, through sprint planning and code reviews. I personally scoped out database schemas, managed frontend-backend communication protocols, set up the server repository, and implemented the primary state workflows for registration validation.",
+      "As the Web Dev Lead, I led the Web Dev Team across UI/UX, frontend, and backend through sprint planning and code reviews. I personally scoped out database schemas, managed frontend-backend communication protocols, set up the server repository, and implemented the primary state workflows for registration validation.",
     techDecisions:
       "We selected Next.js for the frontend to leverage static generation for the landing pages, mixed with dynamic client-side rendering for the contestant dashboards. The backend was powered by Go (Golang) for speed, efficiency, and light memory usage, storing analytical assets inside PostgreSQL.",
     outcomeImpact: [
@@ -53,7 +53,7 @@ export const caseStudies: Record<string, CaseStudy> = {
       "Admin Dashboard: Tools for committee members to manage participants, verify payments, and export registration and ticketing data.",
     ],
     roleContribution:
-      "As a core Frontend Developer, I translated high-fidelity Figma specifications into clean code across the platform's landing pages, its account-based user dashboard covering tryout and Open Campus registration/ticketing forms and the Ini Lho Jurusanmu quiz, and the admin dashboard, optimizing image loads and designing responsive forms that minimized participant friction at every step.",
+      "As a Frontend Developer working within a Scrum-based team, I focused on slicing high-fidelity Figma designs into clean, responsive code, translating the UI/UX team's specifications into production-ready components used by 6,700+ participants.",
     techDecisions:
       "Next.js and TypeScript were selected alongside Tailwind CSS to construct a glowing, premium visual layout with a mobile-first, fully responsive design, ensuring smooth accessibility for students across devices.",
     outcomeImpact: [
@@ -94,7 +94,7 @@ export const caseStudies: Record<string, CaseStudy> = {
       "Admin Dashboard: Tools for organizers to manage participants, verify payments, and track merchandise and registration transactions.",
     ],
     roleContribution:
-      "As a Frontend Developer on the IT team, I built the merchandise store interfaces, cart drawers, account authentication flows, and registration state systems, collaborating closely with backend engineers.",
+      "As a Frontend Developer on the IT team, I focused on slicing high-fidelity designs into responsive code and building interactive animations with Framer Motion to enhance the merchandise store and registration experience.",
     techDecisions:
       "Next.js and TypeScript were selected alongside Tailwind CSS to ensure fast load times, type-safe development, and clean component styling that matched SPE Petrolida's branding guidelines.",
     outcomeImpact: [
@@ -114,7 +114,7 @@ export const caseStudies: Record<string, CaseStudy> = {
       "Admin Dashboard: Tools for organizers to manage registration data and review submissions.",
     ],
     roleContribution:
-      "My contribution centered on slicing Figma designs into responsive frontend layouts and adding interactive animations to enhance the user experience across the platform, with minimal involvement in backend integration.",
+      "My contribution centered on slicing Figma designs into responsive frontend layouts, adding interactive animations to enhance the user experience, and integrating frontend features with backend services across the platform.",
     techDecisions:
       "Developed using Next.js, TypeScript, and Tailwind CSS to construct a clean, modern dark-themed web platform.",
     outcomeImpact: [
