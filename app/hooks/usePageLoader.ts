@@ -5,33 +5,27 @@ import { useState, useEffect } from "react";
 const SESSION_KEY = "portfolio-visited";
 
 /**
- * Shows the full branded loading screen only once per browser session
- * (first page ever visited this session). Later in-session navigations
- * skip it entirely so repeat clicks around the site don't get blocked
- * by an artificial delay — content just renders with its own reveal
- * animations instead.
- *
- * Starts as `false` on every render (server and first client render)
- * to stay hydration-safe; the session check only runs inside the
- * effect, after hydration has already committed.
+ * Shows the full branded loading screen from the very first paint (server
+ * and client render both start `true`, so there's no flash of raw content
+ * before it appears). Once mounted, the effect decides how long it stays:
+ * the full `delay` on the first page visited this browser session, or an
+ * effectively instant hide on later in-session navigations, so repeat
+ * clicks around the site don't get blocked by the artificial delay again.
  */
 export function usePageLoader(delay: number = 800) {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const alreadyVisited = sessionStorage.getItem(SESSION_KEY);
+
     if (alreadyVisited) {
-      return;
+      const hideTimer = setTimeout(() => setIsLoading(false), 0);
+      return () => clearTimeout(hideTimer);
     }
 
     sessionStorage.setItem(SESSION_KEY, "1");
-    const showTimer = setTimeout(() => setIsLoading(true), 0);
     const hideTimer = setTimeout(() => setIsLoading(false), delay);
-
-    return () => {
-      clearTimeout(showTimer);
-      clearTimeout(hideTimer);
-    };
+    return () => clearTimeout(hideTimer);
   }, [delay]);
 
   return isLoading;

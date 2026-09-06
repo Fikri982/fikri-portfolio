@@ -15,11 +15,11 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Muhammad Fikri Hidayat | Fullstack Developer",
+  title: "Muhammad Fikri Hidayat | Software Engineer",
   description:
-    "Portfolio of Muhammad Fikri Hidayat — Mathematics student at ITS & self-taught Fullstack Developer specializing in React, Next.js, TypeScript, and modern web technologies.",
+    "Portfolio of Muhammad Fikri Hidayat — Mathematics student at ITS & self-taught Software Engineer specializing in React, Next.js, TypeScript, and modern web technologies.",
   keywords: [
-    "fullstack developer",
+    "software engineer",
     "web developer",
     "react",
     "next.js",
@@ -31,9 +31,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Muhammad Fikri Hidayat" }],
   openGraph: {
-    title: "Muhammad Fikri Hidayat | Fullstack Developer",
+    title: "Muhammad Fikri Hidayat | Software Engineer",
     description:
-      "Mathematics student at ITS & Fullstack Developer specializing in React, Next.js, TypeScript, and modern web technologies.",
+      "Mathematics student at ITS & Software Engineer specializing in React, Next.js, TypeScript, and modern web technologies.",
     type: "website",
   },
 };

@@ -77,8 +77,8 @@ export const caseStudies: Record<string, CaseStudy> = {
     techDecisions:
       "Built using Next.js, TypeScript, and Tailwind CSS to guarantee a high-speed, modern, type-safe visual environment, using Figma for rapid component prototyping.",
     outcomeImpact: [
-      "Pioneered online competition management for over 1,500 participants across Indonesia.",
-      "Automated payment confirmation through Midtrans integration removed the need for manual admin verification, saving hours of administrative labor.",
+      "Developed an online competition management system for 1,500+ participants across Indonesia, covering registration and event workflows.",
+      "Integrated automated payment confirmation via Midtrans, eliminating manual admin verification and reducing administrative workload.",
     ],
   },
   "petrolida-2026": {
@@ -98,8 +98,8 @@ export const caseStudies: Record<string, CaseStudy> = {
     techDecisions:
       "Next.js and TypeScript were selected alongside Tailwind CSS to ensure fast load times, type-safe development, and clean component styling that matched SPE Petrolida's branding guidelines.",
     outcomeImpact: [
-      "Supported seamless sign-ups for over 900 participants across international student chapters.",
-      "Pioneered direct merchandising sales, yielding automated transaction tracking for the logistics division.",
+      "Streamlined registration for 900+ participants across multiple competition tracks and international student chapters.",
+      "Developed a merchandising sales feature with automated transaction tracking, reducing manual recording and reporting effort.",
     ],
   },
   "futurest-2026": {

@@ -10,7 +10,7 @@ const IsometricArt = dynamic(() => import("@/app/components/ui/IsometricArt"), {
 });
 
 const TITLES = [
-  "Frontend Engineer",
+  "Software Engineer",
   "Web Development Lead",
   "Programming Tutor",
 ];
@@ -150,7 +150,7 @@ export default function HeroSection() {
               </motion.div>
             </Link>
             <a
-              href="https://drive.google.com/file/d/1IXHYn_Hm9smIGTsEmO8TP69m7L3dfwIF/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1sBaZ_kl6dTIDUOStBJ901wZ7m0fRBYY2/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
               className="block w-full sm:w-auto"
