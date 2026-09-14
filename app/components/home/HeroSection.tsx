@@ -150,7 +150,7 @@ export default function HeroSection() {
               </motion.div>
             </Link>
             <a
-              href="https://drive.google.com/file/d/1d3MLd11CPn3Wm_CzeMzrFraS0doyX-8V/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1HoMPEB0z7virZIgpl6BxlOL-WfJ5Rq_U/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
               className="block w-full sm:w-auto"
