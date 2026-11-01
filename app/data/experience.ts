@@ -2,10 +2,20 @@ import { Experience } from "@/app/types/experience";
 
 export const experiences: Experience[] = [
   {
+    id: "surabayadev-12th",
+    role: "Developer",
+    company: "SurabayaDev 12th Anniversary",
+    period: "Sep 2026 — Present",
+    description:
+      "• Developed and maintained the tech community platform for dynamic event management, ticketing, and QR check-ins.\n• Built dynamic event landing pages, guest checkout, payment proof upload, automated ticket claiming, and member dashboard.\n• Implemented an in-browser camera QR code scanner for staff check-ins and a role-based CMS for administrators.\n• Secured guest ticketing workflows via signed URLs and automated account claiming while ensuring reliability with automated Pest tests.",
+    tags: ["Laravel", "Inertia.js", "React", "Tailwind CSS", "MySQL", "Pest 4"],
+    type: "organization",
+  },
+  {
     id: "omits-19",
     role: "Web Development Lead | IT Division",
     company: "OMITS 19TH",
-    period: "Feb 2026 — Present",
+    period: "Feb — Oct 2026",
     description:
       "• Leading the Web Dev Team to develop the official OMITS 19th competition platform using Agile Scrum.\n• Planned the technical architecture and coordinated UI/UX, Frontend, and Backend development to deliver a scalable and cohesive web platform.\n• Contributed to frontend development while leading sprint planning, code reviews, technical discussions, and cross-team collaboration to ensure high-quality and timely feature delivery.",
     tags: ["Next.js", "TypeScript", "Tailwind CSS", "Go", "PostgreSQL"],
@@ -22,12 +32,12 @@ export const experiences: Experience[] = [
     type: "organization",
   },
   {
-    id: "lab-assistant-2",
-    role: "Practicum Assistant of Algorithm & Computer Programming II",
+    id: "lab-assistant",
+    role: "Teaching Assistant, Algorithms and Computer Programming I & II",
     company: "Mathematics ITS",
-    period: "Mar — Jun 2026",
+    period: "Sep 2025 — Present",
     description:
-      "• Guided 17 students in Algorithm and Computer Programming II, focusing on Object-Oriented Programming (OOP) concepts using Java (inheritance, polymorphism, encapsulation).\n• Assisted students in debugging complex runtime and logical errors during hands-on programming sessions.\n• Evaluated weekly coding assignments and the final practical exam (UAP) to objectively assess students' Java programming mastery.",
+      "• Mentored 50+ students across three semesters in Algorithms and Programming 1 and 2, covering fundamental programming concepts through advanced OOP in Java (inheritance, polymorphism, encapsulation).\n• Guided students through debugging and logic-tracing during lab sessions, and evaluated programming assignments and Final Lab Exams each term.",
     tags: ["Java", "OOP", "Algorithms", "Teaching"],
     type: "work",
   },
@@ -90,16 +100,6 @@ export const experiences: Experience[] = [
       "• Developed responsive and reusable frontend features for the official Ini Lho ITS! 2026 event website using Next.js, TypeScript, and Tailwind CSS.\n• Integrated frontend applications with backend services to support event information and the registration workflow for around 6,700 tryout participants.\n• Collaborated with UI/UX designers and developers in a Scrum-based environment to deliver scalable and user-friendly features.",
     tags: ["Next.js", "Tailwind CSS", "TypeScript"],
     type: "organization",
-  },
-  {
-    id: "lab-assistant-1",
-    role: "Practicum Assistant of Algorithm & Computer Programming I",
-    company: "Mathematics ITS",
-    period: "Sep — Nov 2025",
-    description:
-      "• Guided and taught 17 students in Algorithm and Computer Programming I, focusing on basic programming concepts, logic, data types, and control structures (loops and conditions).\n• Assisted students in understanding program logic flows and debugging basic code issues during lab sessions.\n• Evaluated weekly programming assignments and the Final Practical Exam (UAP) objectively to assess students' basic algorithmic foundation.",
-    tags: ["Java", "Algorithms", "Teaching"],
-    type: "work",
   },
   {
     id: "omits-18",

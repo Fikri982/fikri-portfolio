@@ -29,6 +29,12 @@ export const skills: Skill[] = [
 
   // ⚙️ Backend & Data
   {
+    name: "Laravel",
+    category: "backend",
+    icon: "/skills/laravel.svg",
+    badge: "Framework",
+  },
+  {
     name: "Go (Golang)",
     category: "backend",
     icon: "/skills/golang.svg",
@@ -56,6 +62,12 @@ export const skills: Skill[] = [
     name: "PostgreSQL",
     category: "backend",
     icon: "/skills/postgresql.svg",
+    badge: "Relational DB",
+  },
+  {
+    name: "MySQL",
+    category: "backend",
+    icon: "/skills/mysql.svg",
     badge: "Relational DB",
   },
 

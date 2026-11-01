@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { experiences } from "@/app/data/experience";
 
 const COMPANY_GROUPS: Record<string, string> = {
+  "SurabayaDev 12th Anniversary": "SurabayaDev",
   "OMITS 19TH": "OMITS",
   "OMITS 18TH": "OMITS",
   "GERIGI X UKM EXPO ITS 2026": "PKKMB ITS",
@@ -18,6 +19,7 @@ const COMPANY_GROUPS: Record<string, string> = {
 };
 
 const GROUPS = [
+  "SurabayaDev",
   "OMITS",
   "PKKMB ITS",
   "Ini Lho ITS!",
